@@ -29,7 +29,7 @@ c = conn.cursor()
 # ------------------------------------------
 
 # load CSV data into table
-# with open ('findings.csv', 'r') as f:
+# with open ('data.csv', 'r') as f:
 #     reader = csv.reader(f)
 #     data = next(reader) 
 #     query = 'INSERT INTO findings VALUES ({0})'
