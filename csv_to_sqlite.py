@@ -16,11 +16,12 @@ c = conn.cursor()
 #             id INTEGER,
 #             date TEXT,
 #             type TEXT,
+#             aka TEXT,
 #             finder TEXT,
 #             notes TEXT,
 #             lat REAL,
 #             lon REAL,
-#             nasref TEXT
+#             ref TEXT
 #             )""")
 
 # c.execute("DROP TABLE findings")

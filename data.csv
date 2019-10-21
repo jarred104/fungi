@@ -1,4 +1,6 @@
-﻿id,date,type,finder,notes,lat,lon,nasref
-100001,9/18/2019,Larch Polypore,Jarred,"Found on Wildwood Trail, Forest Park",45.587568,-122.793275,529
-100002,10/6/2019,Yellow-Orange Fly Agaric,Jessie,Found at Columbia Children's Arboretum,45.593545,-122.661295,137
-100003,10/20/2019,Clustered Collybia,Billy,"Found on Cannon Trail, Forest Park",45.588725,-122.791729,23
+﻿id,date,type,aka,finder,notes,lat,lon,ref
+100001,9/18/2019,Fomitopsis Pinicola,,Jarred,"Found on Wildwood Trail, Forest Park",45.587568,-122.793275,mpnw258
+100002,10/6/2019,Amanita Muscaria,Fly Agaric,Jessie,Found at Columbia Children's Arboretum,45.593545,-122.661295,mpnw84
+100003,10/20/2019,Hypholoma Fasciculare,,Billy,"Found on Cannon Trail, Forest Park",45.588725,-122.791729,mpnw206
+100004,10/13/2019,Lactarius Deliciosus,Saffron Milk Cap,Jarred, Found in Fort Stevens State Park,46.229245,-123.998431,mpnw55
+100005,10/20/2019,Calocera Cornea,,Jarred,"Found on Cannon Trail, Forest Park",45.587884,-122.792637,mpnw237
