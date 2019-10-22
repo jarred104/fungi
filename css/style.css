@@ -1,11 +1,11 @@
 
 body {
-    background: #e6ba78;
-  }
+  background: #439b72;
+}
 
- .carousel {
-  position:absolute;
-    top:0;    
+.media {
+  position: relative;
+  top:525px;
 }
 
 .navbar {
@@ -13,10 +13,30 @@ body {
   top:15px;
   z-index: 10;
   width:100%;
+  color: #e6ba78;
 }
 
-.media {
-  position: relative;
-  top:900px
+.carousel {
+  position:absolute;
+  top:0;    
+}
+.frontpagepic {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+} 
+
+.gallerytext {
+  margin-top: 85px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 20px;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
