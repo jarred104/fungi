@@ -1,0 +1,22 @@
+
+body {
+    background: #e6ba78;
+  }
+
+ .carousel {
+  position:absolute;
+    top:0;    
+}
+
+.navbar {
+  position:absolute;
+  top:15px;
+  z-index: 10;
+  width:100%;
+}
+
+.media {
+  position: relative;
+  top:900px
+}
+
