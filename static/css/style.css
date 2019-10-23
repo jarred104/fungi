@@ -1,11 +1,19 @@
 
-body {
-  background: #439b72;
+.home {
+  background: #fbffc1;
+}
+
+.gallery {
+  background: rgb(140, 197, 166);
 }
 
 .media {
-  position: relative;
-  top:525px;
+  margin-top:25px;  
+}
+
+.card {
+  border: 1px solid black;
+  box-shadow: 8px 8px 5px grey;
 }
 
 .navbar {
@@ -13,11 +21,15 @@ body {
   top:15px;
   z-index: 10;
   width:100%;
-  color: #e6ba78;
+  opacity: 0.75;
+}
+
+.navimage {
+  width: 40px;
+  height: 40px;
 }
 
 .carousel {
-  position:absolute;
   top:0;    
 }
 .frontpagepic {
@@ -39,4 +51,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 375px;
+  height: 210px;
 }
+
