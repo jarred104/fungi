@@ -4,7 +4,11 @@
 }
 
 .gallery {
-  background: rgb(155, 202, 176);
+  background: rgb(202, 224, 212);
+}
+
+.resources {
+  background: #c8caa4;
 }
 
 .media {
@@ -41,7 +45,7 @@
 } 
 
 .gallerytext {
-  margin-top: 85px;
+  margin-top: 95px;
   margin-left: 12px;
   margin-right: 12px;
   margin-bottom: 20px;
