@@ -4,7 +4,7 @@
 }
 
 .gallery {
-  background: rgb(202, 224, 212);
+  background: #c8caa4;
 }
 
 .resources {
@@ -12,7 +12,7 @@
 }
 
 .media {
-  margin-top:25px;  
+  margin-top:25px;
 }
 
 .card {
@@ -31,6 +31,10 @@
 .navimage {
   width: 40px;
   height: 40px;
+}
+
+.container-fluid {
+  margin-bottom: 25px;
 }
 
 .carousel {
