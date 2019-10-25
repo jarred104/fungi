@@ -55,16 +55,30 @@
   margin-bottom: 20px;
 }
 
-.center {
-  display: block;
+.img-responsive {
+  max-width: 375px;
+  max-height: 210px;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
-  width: 375px;
-  height: 210px;
+  display: block;
 }
+
+
 
 .mr-3 {
   width: 75px;
   height: 75px;
 }
 
+.aboutuspic {
+  border: 1px solid black;
+  box-shadow: 8px 8px 5px grey;
+  height: auto;
+  width: 97%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+}
