@@ -2,7 +2,7 @@ import sqlite3
 import csv
 
 # create connection object for db
-conn = sqlite3.connect('fungi_db')
+conn = sqlite3.connect('fungi_db.sqlite')
 
 # create cursor to execute SQL commands
 c = conn.cursor()
@@ -13,7 +13,7 @@ c = conn.cursor()
 # create SQL table
 # 3 sets of quotes  = dot string, allows strings that span multiple lines
 # c.execute("""CREATE TABLE findings(
-#             id INTEGER,
+#             id INTEGER PRIMARY KEY,
 #             date TEXT,
 #             type TEXT,
 #             aka TEXT,
@@ -45,8 +45,8 @@ c.execute("SELECT * FROM findings")
 
 # test / determine rows to dislplay
 # print(c.fetchone())
-# print(c.fetchmany(2))
-print(c.fetchall())
+print(c.fetchmany(2))
+# print(c.fetchall())
 
 # commit current transaction to db and close
 conn.commit()
