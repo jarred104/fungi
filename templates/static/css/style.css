@@ -1,14 +1,17 @@
 
 .home {
   background: #c8caa4;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .gallery {
   background: #c8caa4;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .resources {
   background: #c8caa4;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .media {
@@ -18,6 +21,7 @@
 .card {
   border: 1px solid black;
   box-shadow: 8px 8px 5px grey;
+  margin-bottom: 10px;
 }
 
 .navbar {
@@ -56,15 +60,11 @@
 }
 
 .img-responsive {
-  max-width: 375px;
-  max-height: 210px;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-
-
 
 .mr-3 {
   width: 75px;
