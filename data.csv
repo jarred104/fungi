@@ -1,6 +1,7 @@
-﻿id,date,type,aka,finder,notes,lat,lon,ref
-100001,9/18/2019,Fomitopsis Pinicola,,Jarred,"Found on Wildwood Trail, Forest Park",45.587568,-122.793275,mpnw258
-100002,10/6/2019,Amanita Muscaria,Fly Agaric,Jessie,Found at Columbia Children's Arboretum,45.593545,-122.661295,mpnw84
-100003,10/20/2019,Hypholoma Fasciculare,,Billy,"Found on Cannon Trail, Forest Park",45.588725,-122.791729,mpnw206
-100004,10/13/2019,Lactarius Deliciosus,Saffron Milk Cap,Jarred, Found in Fort Stevens State Park,46.229245,-123.998431,mpnw55
-100005,10/20/2019,Calocera Cornea,,Jarred,"Found on Cannon Trail, Forest Park",45.587884,-122.792637,mpnw237
+﻿id,date,type,aka,finder,city,state,lat,lon,ref
+100001,9/18/19,Fomitopsis Pinicola,,Jarred,Portland,OR,45.587568,-122.793275,mpnw258
+100002,10/6/19,Amanita Muscaria,Fly Agaric,Jessie,Portland,OR,45.593545,-122.661295,mpnw84
+100003,10/20/19,Hypholoma Fasciculare,,Billy,Portland,OR,45.588725,-122.791729,mpnw206
+100004,10/13/19,Lactarius Deliciosus,Saffron Milk Cap,Jarred,Hammond,OR,46.229245,-123.998431,mpnw55
+100005,10/20/19,Calocera Cornea,,Jarred,Portland,OR,45.587884,-122.792637,mpnw237
+100006,10/27/19,Xerocomellus Zelleri,Zeller's Bolete,Jarred,Portland,OR,45.588603,-122.799644,mpnw219

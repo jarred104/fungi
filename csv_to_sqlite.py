@@ -18,7 +18,8 @@ c = conn.cursor()
 #             type TEXT,
 #             aka TEXT,
 #             finder TEXT,
-#             notes TEXT,
+#             city TEXT,
+#             state TEXT,  
 #             lat REAL,
 #             lon REAL,
 #             ref TEXT
@@ -41,7 +42,7 @@ c = conn.cursor()
 # ------------------------------------------
 # ------------------------------------------
 
-c.execute("SELECT * FROM findings")
+# c.execute("SELECT * FROM findings")
 
 # test / determine rows to dislplay
 # print(c.fetchone())
