@@ -87,6 +87,10 @@ def subscribe():
 def aboutus():
     return render_template("aboutus.html")
 
+@app.route("/projectplan")
+def projectplan():
+    return render_template("projectplan.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
