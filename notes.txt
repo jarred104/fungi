@@ -1,1 +1,2 @@
-resources: paul stamets podcast episodes, pnw mushroom book, michael pollan
+
+https://stackoverflow.com/questions/15209796/getting-data-from-sql-into-leaflet
