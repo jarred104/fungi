@@ -18,7 +18,7 @@
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
 <script>
-    var mymap = L.map('mapid').setView([45.5051, -122.6750], 9);
+    var mymap = L.map('mapid').setView([45.5051, -122.6750], 7);
 
     L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=j0KTqUrCJkeewtiflV72', {
             attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
@@ -43,6 +43,9 @@
 
     var marker6 = L.marker([45.5886, -122.79964]).addTo(mymap);
     marker6.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100006.jpg' class='thumb' height=125px width=125px</><br>October 27, 2019</><br>Jarred - Portland, OR</br>").openPopup();
+
+    var marker7 = L.marker([47.614531, -120.951482]).addTo(mymap);
+    marker7.bindPopup("<b>Corinarius Olympianus</b><br><img src='static/images_thumbnail/rsz_100007.jpg' class='thumb' height=125px width=125px</><br>October 2, 2019</><br>Jessie - Portland, OR</br>").openPopup();
 
     
 </script>
