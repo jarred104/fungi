@@ -71,6 +71,10 @@ def map():
 def map2():
     return render_template("map2.html")
 
+@app.route("/map3")
+def map3():
+    return render_template("map3.html")
+
 @app.route("/resources")
 def resources():
     return render_template("resources.html")

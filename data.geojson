@@ -1,0 +1,167 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.793275,45.587568 ]
+    },
+    "properties": {
+    "id":100001,
+    "date":"9/18/2019",
+    "type":"Fomitopsis Pinicola",
+    "aka":"Larch Polypore",
+    "finder":"Jarred",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw258",
+    "icon":"rsz_100001"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.661295,45.593545 ]
+    },
+    "properties": {
+    "id":100002,
+    "date":"10/6/2019",
+    "type":"Amanita Muscaria",
+    "aka":"Fly Agaric",
+    "finder":"Jessie",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw84",
+    "icon":"rsz_100002"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.791729,45.588725 ]
+    },
+    "properties": {
+    "id":100003,
+    "date":"10/20/2019",
+    "type":"Hypholoma Fasciculare",
+    "aka":"",
+    "finder":"Billy",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw206",
+    "icon":"rsz_100003"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.998431,46.229245 ]
+    },
+    "properties": {
+    "id":100004,
+    "date":"10/13/2019",
+    "type":"Lactarius Deliciosus",
+    "aka":"Saffron Milk Cap",
+    "finder":"Jarred",
+    "city":"Hammond",
+    "state":"OR",
+    "ref":"mpnw55",
+    "icon":"rsz_100004"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.792637,45.587884 ]
+    },
+    "properties": {
+    "id":100005,
+    "date":"10/20/2019",
+    "type":"Calocera Cornea",
+    "aka":"",
+    "finder":"Jarred",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw237",
+    "icon":"rsz_100005"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.799644,45.588603 ]
+    },
+    "properties": {
+    "id":100006,
+    "date":"10/27/2019",
+    "type":"Xerocomellus Zelleri",
+    "aka":"Zeller's Bolete",
+    "finder":"Jarred",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw219",
+    "icon":"rsz_100006"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.951482,47.614531 ]
+    },
+    "properties": {
+    "id":100007,
+    "date":"10/2/2019",
+    "type":"Corinarius Olympianus",
+    "aka":"",
+    "finder":"Jessie",
+    "city":"Leavenworth",
+    "state":"WA",
+    "ref":"mpnw158",
+    "icon":"rsz_100007"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.964056,47.626089 ]
+    },
+    "properties": {
+    "id":100008,
+    "date":"10/2/2019",
+    "type":"Lycoperdon Perlatum",
+    "aka":"Gem-Studded Puffball",
+    "finder":"Jessie",
+    "city":"Leavenworth",
+    "state":"WA",
+    "ref":"mnw232",
+    "icon":"rsz_100008"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.963222,47.624127 ]
+    },
+    "properties": {
+    "id":100009,
+    "date":"10/2/2019",
+    "type":"Tubinellus Floccosus",
+    "aka":"Scaly Vase Chantrelle",
+    "finder":"Jessie",
+    "city":"Leavenworth",
+    "state":"WA",
+    "ref":"mnw44",
+    "icon":"rsz_100009"
+    }
+  }
+]
+}
