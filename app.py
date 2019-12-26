@@ -67,6 +67,10 @@ def gallery():
 def map():
     return render_template("map.html")
 
+@app.route("/map2")
+def map2():
+    return render_template("map2.html")
+
 @app.route("/resources")
 def resources():
     return render_template("resources.html")

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+<style>
+
+#mapid {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="mapid"></div>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+<script>
+    var mymap = L.map('mapid').setView([45.5051, -122.6750], 7);
+
+    L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=j0KTqUrCJkeewtiflV72', {
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(mymap);
+</script>
+
+<script>
+
+var plots = L.dataCsv(null, {
+onEachFeature: function (feature, layer) {
+var popup = '';
+popup += feature.properties.type +'Type:<br>'+feature.properties.finder + 'Finder:<br>';
+// if (feature.properties.condition == -1) {popup += 'Condition:Destroyed<br>';}
+// if (feature.properties.condition > 0) {popup += 'Condition:'+feature.properties.condition +'<br>';}
+// if (feature.properties.ambience > 0) {popup += 'Ambience:'+feature.properties.ambience +'<br>';}
+// if (feature.properties.access > 0) {popup += 'Access:'+feature.properties.access +'<br>';}
+// if (feature.properties.accuracy > 0) {popup += 'Accuracy:'+feature.properties.accuracy +'<br>';}
+    // popup += '<a target="_blank" href="article.php?sid='+feature.properties.sid+'">Link to site</a>';
+    layer.bindPopup(popup);
+},
+pointToLayer: function (feature, lat, lon) {
+    return L.marker(lat, lon, {
+        icon:L.icon({
+            // modify icon
+            iconUrl: 'static/images_thumbnail/'+feature.properties.icon+'.jpg',
+            iconSize: [20,20],
+            })
+        });
+    },
+    firstLineTitles: true
+});
+
+    
+</script>
+
+
+</body>
+</html>
+

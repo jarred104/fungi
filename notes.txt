@@ -1,2 +1,4 @@
 
 https://stackoverflow.com/questions/15209796/getting-data-from-sql-into-leaflet
+
+https://gis.stackexchange.com/questions/148342/leaflet-map-custom-markers-from-csv-and-referring-to-csv-geojson-marker-prop
