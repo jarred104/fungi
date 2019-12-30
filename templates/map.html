@@ -1,62 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<html>
 
-<style>
+    <head>
+      <title>IF Map</title>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+      <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-#mapid {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+      <style>
+        #map{ height: 100% }
+      </style>
 
-</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="static/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-</head>
+    </head>
+    <body>
 
-<body>
-
-<div id="mapid"></div>
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-
-<script>
-    var mymap = L.map('mapid').setView([45.5051, -122.6750], 7);
-
-    L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=j0KTqUrCJkeewtiflV72', {
-            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-        }).addTo(mymap);
-</script>
-
-<script>
-    var marker1 = L.marker([45.58757, -122.79328]).addTo(mymap);
-    marker1.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100001.jpg' class='thumb' height=125px width=125px</><br>September 18, 2019</><br>Jarred - Portland, OR</br>").openPopup();
-
-    var marker2 = L.marker([45.59355, -122.66130]).addTo(mymap);
-    marker2.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100002.jpg' class='thumb' height=125px width=125px</><br>October 6, 2019</><br>Jessie - Portland, OR</br>").openPopup();
-
-    var marker3 = L.marker([45.58873, -122.79173]).addTo(mymap);
-    marker3.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100003.jpg' class='thumb' height=125px width=125px</><br>October 20, 2019</><br>Billy - Portland, OR</br>").openPopup();
-
-    var marker4 = L.marker([46.22925, -123.99843]).addTo(mymap);
-    marker4.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100004.jpg' class='thumb' height=125px width=125px</><br>October 13, 2019</><br>Jarred - Portland, OR</br>").openPopup();
-
-    var marker5 = L.marker([45.58788, -122.79264]).addTo(mymap);
-    marker5.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100005.jpg' class='thumb' height=125px width=125px</><br>October 20, 2019</><br>Jarred - Portland, OR</br>").openPopup();
-
-    var marker6 = L.marker([45.5886, -122.79964]).addTo(mymap);
-    marker6.bindPopup("<b>Fomitopsis Pinicola</b><br><img src='static/images_thumbnail/rsz_100006.jpg' class='thumb' height=125px width=125px</><br>October 27, 2019</><br>Jarred - Portland, OR</br>").openPopup();
-
-    var marker7 = L.marker([47.614531, -120.951482]).addTo(mymap);
-    marker7.bindPopup("<b>Corinarius Olympianus</b><br><img src='static/images_thumbnail/rsz_100007.jpg' class='thumb' height=125px width=125px</><br>October 2, 2019</><br>Jessie - Portland, OR</br>").openPopup();
-
-    var marker8 = L.marker([47.626089, -120.964056]).addTo(mymap);
-    marker8.bindPopup("<b>Lycoperdon Perlatum</b><br><img src='static/images_thumbnail/rsz_100008.jpg' class='thumb' height=125px width=125px</><br>October 2, 2019</><br>Jessie - Portland, OR</br>").openPopup();
-
-    var marker9 = L.marker([47.624127, -120.963222]).addTo(mymap);
-    marker9.bindPopup("<b>Tubinellus Floccosus</b><br><img src='static/images_thumbnail/rsz_100009.jpg' class='thumb' height=125px width=125px</><br>October 2, 2019</><br>Jessie - Portland, OR</br>").openPopup();
-
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="index"><img src="static/images_raw/sporeprint.jpg" class="navimage"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="map">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="subscribe">Subscribe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="share">Share</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="store">Store</a>
+                <a class="dropdown-item" href="resources">Resources</a>
+                <a class="dropdown-item" href="aboutus">About Us</a>
+                <a class="dropdown-item" href="projectplan">Project Plan</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     
+      <div id="map"></div>
+    
+      <script>
+
+      // Initialize Map
+      var map = L.map('map').setView([45.5051, -122.6750], 7);
+
+
+      // Tile Layer
+      L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=j0KTqUrCJkeewtiflV72',
+        {
+          attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        }).addTo(map);
+
+        // Read geojson file, add markers and popups
+        $.getJSON('/static/data.geojson', function(data) {
+          var geojson = L.geoJson(data, {
+            onEachFeature: function (feature, layer) {
+              layer.bindPopup('<b>' + feature.properties.type + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state).addTo(map);
+            }
+          })
+        });
+
+
+ 
 </script>
-
-
 </body>
-</html>
-
+</html>      
