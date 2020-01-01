@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IF Gallery</title>
-
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="static/css/style.css" rel="stylesheet">
@@ -62,162 +62,26 @@
                     Check out these fantastic fungi found & identfied (hopefully correctly) in the Pacific Northwest!  We are mushroom hunting and photo taking enthusiasts, but not identification experts.  Our hope is to build this website into a space where people like us can create their own galleries, maps, and interact with a community of people who share the same passion.  Check out our <a href=projectplan>Project Plan</a> page for additional details.  In the meantime, enjoy browsing our photos.
                 </p></div>
 
+                
+             
+<script>
+           
+$.getJSON('/static/data.geojson', function( data ) {
+   for(var key in data.features){
+     var out='<div class="card">';
+     out+='<h5 class="card-header">' + data.features[key].properties.type + '</h5>';
+     out+='<img class="img-responsive" src="/static/images_raw/'+data.features[key].properties.gallery_image+'" max-width="375px" max-height="210px" alt="...">';
+     out+='<div class="card-footer">' + '<p>AKA: ' + data.features[key].properties.aka + '</br>' + '<p>Finder: ' + data.features[key].properties.finder + '<p>Near: ' + data.features[key].properties.city + ", " + data.features[key].properties.state +'</div>';
+     out+='</div>'    
+     $('body').append(out);
+   }
+ });
 
+// var test = $.getJSON('/static/data.geojson')
+// console.log(test)
 
-              <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <h5 class="card-header">
-                                Fomitopsis Pinicola
-                            </h5>
-                            <div class="imgwrapper">
-                                <img src="static/images_raw/100001.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                            </div>
-                            <div class="card-footer">
-                                <p>AKA: Larch Polypore</p>
-                                <p>Finder: Jarred</p>
-                                <p>Nearest City: Portland, OR</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <h5 class="card-header">
-                                Amanita Muscaria
-                            </h5>
-                            <div class="imgwrapper">
-                                <img src="static/images_raw/100002.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                            </div>
-                            <div class="card-footer">
-                              <p>AKA: Fly Agaric</p>
-                              <p>Finder: Jessie</p>
-                              <p>Nearest City: Portland, OR</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <h5 class="card-header">
-                              Corinarius Olympianus
-                            </h5>
-                            <div class="imgwrapper">
-                                <img src="static/images_raw/100007.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                            </div>
-                            <div class="card-footer">
-                              <p>AKA:</p>
-                              <p>Finder: Jessie</p>
-                              <p>Nearest City: Leavenworth, WA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-fluid">
-              <div class="row">
-                  <div class="col-md-4">
-                      <div class="card">
-                          <h5 class="card-header">
-                            Xerocomellus Zelleri
-                          </h5>
-                          <div class="imgwrapper">
-                              <img src="static/images_raw/100006.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                          </div>
-                          <div class="card-footer">
-                              <p>AKA: Zeller's Bolete</p>
-                              <p>Finder: Jarred</p>
-                              <p>Nearest City: Portland, OR</p>
-                              
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="card">
-                          <h5 class="card-header">
-                            Lactarius Deliciosus
-                          </h5>
-                          <div class="imgwrapper">
-                              <img src="static/images_raw/gal100004.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                          </div>
-                          <div class="card-footer">
-                            <p>AKA: Saffron Milk Cap</p>
-                            <p>Finder: Jarred</p>
-                            <p>Nearest City: Hammond, OR</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="card">
-                          <h5 class="card-header">
-                            Calocera Cornea
-                          </h5>
-                          <div class="imgwrapper">
-                              <img src="static/images_raw/100005.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                          </div>
-                          <div class="card-footer">
-                            <p>AKA:</p>
-                            <p>Finder: Jarred</p>
-                            <p>Nearest City: Portland, OR</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <h5 class="card-header">
-                          Hypholoma Fasciculare
-                        </h5>
-                        <div class="imgwrapper">
-                            <img src="static/images_raw/100003.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                        </div>
-                        <div class="card-footer">
-                          <p>AKA:</p>
-                          <p>Finder: Billy</p>
-                          <p>Nearest City: Portland, OR</p></p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <h5 class="card-header">
-                          Lycoperdon Perlatum
-                        </h5>
-                        <div class="imgwrapper">
-                            <img src="static/images_raw/100008.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                        </div>
-                        <div class="card-footer">
-                          <p>AKA: Gem-Studded Puffball</p>
-                          <p>Finder: Jessie</p>
-                          <p>Nearest City: Leavenworth, WA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <h5 class="card-header">
-                          Tubinellus Floccosus
-                        </h5>
-                        <div class="imgwrapper">
-                            <img src="static/images_raw/100009.jpg" class="img-responsive" max-width="375px" max-height="210px" alt="...">
-                        </div>
-                        <div class="card-footer">
-                          <p>AKA: Scaly Vase Chantrelle</p>
-                          <p>Finder: Jessie</p>
-                          <p>Nearest City: Leavenworth, WA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-       
+                
+                </script>      
 
 
 
@@ -227,3 +91,5 @@
       
       </body>
       </html>
+
+      <!-- https://stackoverflow.com/questions/50213958/ajax-call-to-local-custom-json-file-to-create-bootstrap-4-cards-using-js -->

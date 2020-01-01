@@ -16,7 +16,8 @@
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw258",
-    "image":"rsz_100001.jpg"
+    "map_image":"rsz_100001.jpg",
+    "gallery_image":"100001.jpg"
     }
   },
   {
@@ -34,7 +35,8 @@
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw84",
-    "image":"rsz_100002.jpg"
+    "map_image":"rsz_100002.jpg",
+    "gallery_image":"100002.jpg"
     }
   },
   {
@@ -52,7 +54,8 @@
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw206",
-    "image":"rsz_100003.jpg"
+    "map_image":"rsz_100003.jpg",
+    "gallery_image":"100003.jpg"
     }
   },
   {
@@ -70,7 +73,8 @@
     "city":"Hammond",
     "state":"OR",
     "ref":"mpnw55",
-    "image":"rsz_100004.jpg"
+    "map_image":"rsz_100004.jpg",
+    "gallery_image":"100004.jpg"
     }
   },
   {
@@ -88,7 +92,8 @@
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw237",
-    "image":"rsz_100005.jpg"
+    "map_image":"rsz_100005.jpg",
+    "gallery_image":"100005.jpg"
     }
   },
   {
@@ -106,7 +111,8 @@
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw219",
-    "image":"rsz_100006.jpg"
+    "map_image":"rsz_100006.jpg",
+    "gallery_image":"100006.jpg"
     }
   },
   {
@@ -124,7 +130,8 @@
     "city":"Leavenworth",
     "state":"WA",
     "ref":"mpnw158",
-    "image":"rsz_100007.jpg"
+    "map_image":"rsz_100007.jpg",
+    "gallery_image":"100007.jpg"
     }
   },
   {
@@ -142,7 +149,8 @@
     "city":"Leavenworth",
     "state":"WA",
     "ref":"mnw232",
-    "image":"rsz_100008.jpg"
+    "map_image":"rsz_100008.jpg",
+    "gallery_image":"100008.jpg"
     }
   },
   {
@@ -160,7 +168,8 @@
     "city":"Leavenworth",
     "state":"WA",
     "ref":"mnw44",
-    "image":"rsz_100009.jpg"
+    "map_image":"rsz_100009.jpg",
+    "gallery_image":"100009.jpg"
     }
   }
 ]

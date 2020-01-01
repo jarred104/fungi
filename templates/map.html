@@ -73,7 +73,7 @@
         $.getJSON('/static/data.geojson', function(data) {
           var geojson = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
-              layer.bindPopup('<b>' + feature.properties.type + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state).addTo(map);
+              layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>').addTo(map);
             }
           })
         });
