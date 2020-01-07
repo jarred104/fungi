@@ -70,7 +70,7 @@ $.getJSON('/static/data.geojson', function( data ) {
    for(var key in data.features){
      var out='<div class="card">';
      out+='<h5 class="card-header">' + data.features[key].properties.type + '</h5>';
-     out+='<img class="img-responsive" src="/static/images_raw/'+data.features[key].properties.gallery_image+'" max-width="375px" max-height="210px" alt="...">';
+     out+='<img class="img-responsive" src="/static/images_raw/'+data.features[key].properties.gallery_image+'" max-width="700px" max-height="380px" alt="...">';
      out+='<div class="card-footer">' + '<p>AKA: ' + data.features[key].properties.aka + '</br>' + '<p>Finder: ' + data.features[key].properties.finder + '<p>Near: ' + data.features[key].properties.city + ", " + data.features[key].properties.state +'</div>';
      out+='</div>'    
      $('body').append(out);
