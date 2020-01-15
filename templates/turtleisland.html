@@ -2,7 +2,7 @@
 <html>
 
     <head>
-      <title>IF Map</title>
+      <title>Turtle Islanders</title>
 
 <!-- Load Leaflet from CDN -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -65,7 +65,7 @@ crossorigin=""></script>
       <script>
 
       // Initialize Map
-      var map = L.map('map').setView([45.5051, -122.6750], 7);
+      var map = L.map('map').setView([37.6675, -97.1331], 3.3);
 
 
       // Tile Layer
@@ -85,27 +85,27 @@ crossorigin=""></script>
         // });
 
 
-    //     var geojsonMarkerOptions = {
-    // radius: 8,
-    // fillColor: "#ff7800",
-    // color: "#000",
-    // weight: 1,
-    // opacity: 1,
-    // fillOpacity: 0.8};
+        var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8};
 
-    // var markers = L.markerClusterGroup();
+    var markers = L.markerClusterGroup();
         
 
-        $.getJSON('/static/data.geojson', function(data) {
+        $.getJSON('/static/turtle.geojson', function(data) {
           var geojson = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
-              layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');              
+              layer.bindPopup('<b>Tribe: ' + feature.properties.tribe + '</b>' + '</br>' + '<b>Clan: ' + feature.properties.clan + '</b>' + '</br>' + "<img src='/static/turtle_images/" + feature.properties.image + "' class='thumb' height=200px width=200px />" + '</br>' + '<b>Chief: '+ feature.properties.chief + '</b>' + '</br>' + '<b>Year: '+ feature.properties.year + '</b>' + '</br>' + '<b>US Leader: ' + feature.properties.us_leader + '</b>' + '</br>' + '<b>Lies:  ' + feature.properties.lies + '</br>' + '<b>Casualties:  ' + feature.properties.casualties + '</b>' + '</br>' + '<b>Aftermath:  ' + feature.properties.aftermath + '</b>');              
             },
             pointToLayer: function (data, latlng) {
               return L.circleMarker(latlng);
             }
           }).addTo(map);
-          map.fitBounds(geojson.getBounds());
+          // map.fitBounds(geojson.getBounds());
         });
 
         // https://gis.stackexchange.com/questions/331234/leaflet-load-json-data

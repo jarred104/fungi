@@ -91,6 +91,10 @@ def aboutus():
 def projectplan():
     return render_template("projectplan.html")
 
+@app.route("/turtleisland")
+def turtleisland():
+    return render_template("turtleisland.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

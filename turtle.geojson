@@ -1,0 +1,23 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.435719,44.701456 ]
+    },
+    "properties": {
+    "tribe":"Sioux",
+    "clan":"Santee Dakota",
+    "chief":"Little Crow",
+    "year":1862,
+    "us_leader":"Colonel Henry Hastings Sibley",
+    "lies":"Notes to be added:  The narrative of the Sioux begins with Brown's discussion of the Santee Dakota tribe. Following a poor harvest and lack of promised support from the US government in the early 1860s, members of the tribe became angry at white people. After the murder of several white men and women by young Dakota, the frustrated Santee tribe, led by Chief Little Crow, attacked Fort Ridgely and a nearby town. When the Santees refuse to surrender their white hostages to Colonel Sibley, they are forced into battle again at Yellow Medicine River. The Santees lose and over three dozen Santee warriors are executed in December 1862. Santee chiefs, including Chief Little Crow, were killed during the following six months, and the remaining Santees are removed to a Missouri River and Crow Creek reservation",
+    "event":"Battle of Wood Lake",
+    "casualties":"tbd",
+    "aftermath":"tbd"
+    }
+  }
+]
+}
