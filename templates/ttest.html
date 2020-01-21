@@ -2,7 +2,7 @@
 <html>
 
     <head>
-      <title>Turtle Island</title>
+      <title>Turtle Islanders</title>
 
 <!-- Load Leaflet from CDN -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -38,7 +38,20 @@ crossorigin=""></script>
   integrity="sha512-2/Nwrks+A2omjKeWrF4TKFLIrUbAhSl8EDEm6xunuwXXYqMoJI71PZtlW0/vqt9d3DOyP1md/bzAnNH2KuAhaQ=="
   crossorigin=""></script>
 
+ 
 
+      <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+      <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="static/css/style.css" rel="stylesheet"> -->
+      
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@0.5.0/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@0.5.0/dist/MarkerCluster.Default.css" />
+<script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@0.5.0/dist/leaflet.markercluster.js"></script> -->
    
       <style>
         #map{ height: 100% }
@@ -61,31 +74,67 @@ crossorigin=""></script>
           attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         }).addTo(map);
 
-      
+   
+
+
+    //     var geojsonMarkerOptions = {
+    // radius: 8,
+    // fillColor: "#ff7800",
+    // color: "#000",
+    // weight: 1,
+    // opacity: 1,
+    // fillOpacity: 0.8};
+
+    // var markers = L.markerClusterGroup();
+
+
         $.getJSON('/static/turtle.geojson', function(data) {
           var geojson = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
               layer.bindPopup('<b>Tribe: ' + feature.properties.tribe + '</b>' + '</br>' + '<b>Clan: ' + feature.properties.clan + '</b>' + '</br>' + "<img src='/static/turtle_images/" + feature.properties.image + "' class='thumb' height=200px width=200px />" + '</br>' + '<b>Chief: '+ feature.properties.chief + '</b>' + '</br>' + '<b>Year: '+ feature.properties.year + '</b>' + '</br>' + '<b>US Leader: ' + feature.properties.us_leader + '</b>' + '</br>' + '<b>Lies:  ' + feature.properties.lies + '</br>' + '<b>Casualties:  ' + feature.properties.casualties + '</b>' + '</br>' + '<b>Aftermath:  ' + feature.properties.aftermath + '</b>');          
             },            
-            pointToLayer: function (feature, latlng) {
-              var myIcon = L.icon({
-                iconSize: [27, 27],
-                shadowSize: [27, 27],
-                shadowAnchor: [10, 10],
-                popupAnchor: [1, -10],
-                shadowUrl: '/static/icons/shadow.jpg',
-                iconUrl: '/static/icons/' + feature.properties.icon
-              });
-              return L.marker(latlng, {icon: myIcon});
+            pointToLayer: function (data, latlng) {
+              return L.circleMarker(latlng);
             }
           }).addTo(map);
+          // map.fitBounds(geojson.getBounds());
         });
-        
+
+        // $.getJSON('/static/turtle.geojson', function(data) {
+        //   var geojson = L.geoJson(data, {
+        //     onEachFeature: function (feature, layer) {
+        //       layer.bindPopup('<b>Tribe: ' + feature.properties.tribe + '</b>' + '</br>' + '<b>Clan: ' + feature.properties.clan + '</b>' + '</br>' + "<img src='/static/turtle_images/" + feature.properties.image + "' class='thumb' height=200px width=200px />" + '</br>' + '<b>Chief: '+ feature.properties.chief + '</b>' + '</br>' + '<b>Year: '+ feature.properties.year + '</b>' + '</br>' + '<b>US Leader: ' + feature.properties.us_leader + '</b>' + '</br>' + '<b>Lies:  ' + feature.properties.lies + '</br>' + '<b>Casualties:  ' + feature.properties.casualties + '</b>' + '</br>' + '<b>Aftermath:  ' + feature.properties.aftermath + '</b>');          
+        //     },            
+        //     pointToLayer: function (feature, latlng) {
+        //       var myIcon = L.icon({
+        //         iconSize: [27, 27],
+        //         iconAnchor: [13,27],
+        //         popupAncho: [1,-24],
+        //         iconURL: '/static/icons/' + feature.properties.icon
+        //       });
+        //       return L.marker(latlng, {icon: myIcon});
+        //     }
+        //   }).addTo(map);
+        //   map.fitBounds(geojson.getBounds());
+        // });
 
         // https://gis.stackexchange.com/questions/331234/leaflet-load-json-data
 
+        // var markers = L.markerClusterGroup();
+        //       markers.addLayer(geojson);
+        //       map.addLayer(markers);
 
-             
+        // var markers = L.markerClusterGroup();
+       
+        // geojson.on('data:loaded', function () {
+        //   markers.addLayer(geojson);
+        //   console.log(markers);
+        //   map.addLayer(markers);
+        // });     
+
+        
+
+      
 </script>
 </body>
 </html>      
