@@ -52,7 +52,7 @@ crossorigin=""></script>
       <script>
 
       // Initialize Map
-      var map = L.map('map').setView([37.6675, -97.1331], 3.3);
+      var map = L.map('map').setView([37.6675, -97.1331], 5);
 
 
       // Tile Layer
@@ -69,10 +69,10 @@ crossorigin=""></script>
             },            
             pointToLayer: function (feature, latlng) {
               var myIcon = L.icon({
-                iconSize: [27, 27],
-                shadowSize: [27, 27],
-                shadowAnchor: [10, 10],
-                popupAnchor: [1, -10],
+                iconSize: [75, 75],
+                shadowSize: [75, 75],
+                shadowAnchor: [33, 33],
+                popupAnchor: [1, -30],
                 shadowUrl: '/static/icons/shadow.jpg',
                 iconUrl: '/static/icons/' + feature.properties.icon
               });

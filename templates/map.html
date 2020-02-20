@@ -4,43 +4,8 @@
     <head>
       <title>IF Map</title>
 
-<!-- Load Leaflet from CDN -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-crossorigin=""></script>
 
-
-<!-- Load Esri Leaflet from CDN -->
-<script src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
-integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
-crossorigin=""></script>
-
-
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-
-
-<!-- Load Leaflet MarkerCluster and Esri Leaflet Cluster from CDN -->
-<link rel="stylesheet" type="text/css"
-  href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
-  integrity="sha512-BBToHPBStgMiw0lD4AtkRIZmdndhB6aQbXpX7omcrXeG2PauGBl2lzq2xUZTxaLxYz5IDHlmneCZ1IJ+P3kYtQ=="
-  crossorigin="">
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
-  integrity="sha512-RLEjtaFGdC4iQMJDbMzim/dOvAu+8Qp9sw7QE4wIMYcg2goVoivzwgSZq9CsIxp4xKAZPKh5J2f2lOko2Ze6FQ=="
-  crossorigin="">
-<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
-  integrity="sha512-MQlyPV+ol2lp4KodaU/Xmrn+txc1TP15pOBF/2Sfre7MRsA/pB4Vy58bEqe9u7a7DczMLtU5wT8n7OblJepKbg=="
-  crossorigin=""></script>
-<script src="https://unpkg.com/esri-leaflet-cluster@2.0.1/dist/esri-leaflet-cluster.js"
-  integrity="sha512-2/Nwrks+A2omjKeWrF4TKFLIrUbAhSl8EDEm6xunuwXXYqMoJI71PZtlW0/vqt9d3DOyP1md/bzAnNH2KuAhaQ=="
-  crossorigin=""></script>
-
- 
-
-      <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
       <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
       <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
       
@@ -51,7 +16,7 @@ crossorigin=""></script>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@0.5.0/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@0.5.0/dist/MarkerCluster.Default.css" />
-<script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@0.5.0/dist/leaflet.markercluster.js"></script> -->
+<script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@0.5.0/dist/leaflet.markercluster.js"></script>
    
       <style>
         #map{ height: 100% }
@@ -72,20 +37,65 @@ crossorigin=""></script>
       L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=j0KTqUrCJkeewtiflV72',
         {
           attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
-        }).addTo(map);
+        }).addTo(map);  
+
+
+//Read geojson and bind popup
+        $.getJSON('/static/data.geojson', function(data) {
+          var geojson = L.geoJson(data, {
+            onEachFeature: function (feature, layer) {
+              layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');              
+            },
+            pointToLayer: function (data, latlng) {
+              return L.marker(latlng);
+            }
+          }).addTo(map);
+          map.fitBounds(geojson.getBounds());
+        });
 
       
-        // Read geojson file, add markers and popups
-        // $.getJSON('/static/data.geojson', function(data) {
-        //   var geojson = L.geoJson(data, {
-        //     onEachFeature: function (feature, layer) {
-        //       layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>').addTo(map);
-        //     }
-        //   })
-        // });
+</script>
+</body>
+</html>      
+
+<!-- OLD STUFF -->
+
+<!-- Load Leaflet from CDN -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+crossorigin=""></script> -->
 
 
-    //     var geojsonMarkerOptions = {
+<!-- Load Esri Leaflet from CDN -->
+<!-- <script src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
+integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
+crossorigin=""></script>
+
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+
+
+
+<!-- Load Leaflet MarkerCluster and Esri Leaflet Cluster from CDN -->
+<!-- <link rel="stylesheet" type="text/css"
+  href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+  integrity="sha512-BBToHPBStgMiw0lD4AtkRIZmdndhB6aQbXpX7omcrXeG2PauGBl2lzq2xUZTxaLxYz5IDHlmneCZ1IJ+P3kYtQ=="
+  crossorigin="">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
+  integrity="sha512-RLEjtaFGdC4iQMJDbMzim/dOvAu+8Qp9sw7QE4wIMYcg2goVoivzwgSZq9CsIxp4xKAZPKh5J2f2lOko2Ze6FQ=="
+  crossorigin="">
+<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
+  integrity="sha512-MQlyPV+ol2lp4KodaU/Xmrn+txc1TP15pOBF/2Sfre7MRsA/pB4Vy58bEqe9u7a7DczMLtU5wT8n7OblJepKbg=="
+  crossorigin=""></script>
+<script src="https://unpkg.com/esri-leaflet-cluster@2.0.1/dist/esri-leaflet-cluster.js"
+  integrity="sha512-2/Nwrks+A2omjKeWrF4TKFLIrUbAhSl8EDEm6xunuwXXYqMoJI71PZtlW0/vqt9d3DOyP1md/bzAnNH2KuAhaQ=="
+  crossorigin=""></script> -->
+
+  
+  <!-- //     var geojsonMarkerOptions = {
     // radius: 8,
     // fillColor: "#ff7800",
     // color: "#000",
@@ -93,38 +103,22 @@ crossorigin=""></script>
     // opacity: 1,
     // fillOpacity: 0.8};
 
+    // var markers = L.markerClusterGroup(); -->
+
+<!--     
+    // https://gis.stackexchange.com/questions/331234/leaflet-load-json-data
+
     // var markers = L.markerClusterGroup();
-        
+    //       markers.addLayer(geojson);
+    //       map.addLayer(markers);
 
-        $.getJSON('/static/data.geojson', function(data) {
-          var geojson = L.geoJson(data, {
-            onEachFeature: function (feature, layer) {
-              layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: '+ feature.properties.aka + '</b>' + '</br>' + '<b>Finder: '+ feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');              
-            },
-            pointToLayer: function (data, latlng) {
-              return L.circleMarker(latlng);
-            }
-          }).addTo(map);
-          map.fitBounds(geojson.getBounds());
-        });
+    // var markers = L.markerClusterGroup();
+   
+    // geojson.on('data:loaded', function () {
+    //   markers.addLayer(geojson);
+    //   console.log(markers);
+    //   map.addLayer(markers);
+    // });      -->
 
-        // https://gis.stackexchange.com/questions/331234/leaflet-load-json-data
-
-        // var markers = L.markerClusterGroup();
-        //       markers.addLayer(geojson);
-        //       map.addLayer(markers);
-
-        // var markers = L.markerClusterGroup();
-       
-        // geojson.on('data:loaded', function () {
-        //   markers.addLayer(geojson);
-        //   console.log(markers);
-        //   map.addLayer(markers);
-        // });     
 
         
-
-      
-</script>
-</body>
-</html>      
