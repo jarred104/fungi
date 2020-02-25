@@ -65,7 +65,7 @@
           return L.marker(latlng);
         },
         onEachFeature: function (feature, layer) {
-          layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>AKA: ' + feature.properties.aka + '</b>' + '</br>' + '<b>Finder: ' + feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');
+          layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>Notes: ' + feature.properties.notes + '</b>' + '</br>' + '<b>Finder: ' + feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');
         }
       }));
       map.addLayer(markers);
