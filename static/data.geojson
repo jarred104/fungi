@@ -10,8 +10,8 @@
     "properties": {
     "id":100001,
     "date":"9/18/2019",
-    "type":"Fomitopsis Pinicola",
-    "aka":"Larch Polypore",
+    "type":"Fomitopsis pinicola",
+    "notes":"AKA Larch Polypore",
     "finder":"Jarred",
     "city":"Portland",
     "state":"OR",
@@ -29,9 +29,9 @@
     "properties": {
     "id":100002,
     "date":"10/6/2019",
-    "type":"Amanita Muscaria",
-    "aka":"Fly Agaric",
-    "finder":"Jessie",
+    "type":"Amanita muscaria",
+    "notes":"AKA Fly Agaric",
+    "finder":"Jessie, Jarred",
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw84",
@@ -48,9 +48,9 @@
     "properties": {
     "id":100003,
     "date":"10/20/2019",
-    "type":"Hypholoma Fasciculare",
-    "aka":"",
-    "finder":"Billy",
+    "type":"Hypholoma fasciculare",
+    "notes":"",
+    "finder":"Billy, Jarred",
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw206",
@@ -67,8 +67,8 @@
     "properties": {
     "id":100004,
     "date":"10/13/2019",
-    "type":"Lactarius Deliciosus",
-    "aka":"Saffron Milk Cap",
+    "type":"Lactarius deliciosus",
+    "notes":"AKA Saffron Milk Cap",
     "finder":"Jarred",
     "city":"Hammond",
     "state":"OR",
@@ -86,9 +86,9 @@
     "properties": {
     "id":100005,
     "date":"10/20/2019",
-    "type":"Calocera Cornea",
-    "aka":"",
-    "finder":"Jarred",
+    "type":"Calocera cornea",
+    "notes":"",
+    "finder":"Jarred, Billy",
     "city":"Portland",
     "state":"OR",
     "ref":"mpnw237",
@@ -105,8 +105,8 @@
     "properties": {
     "id":100006,
     "date":"10/27/2019",
-    "type":"Xerocomellus Zelleri",
-    "aka":"Zeller's Bolete",
+    "type":"Xerocomellus zelleri",
+    "notes":"AKA Zeller's Bolete",
     "finder":"Jarred",
     "city":"Portland",
     "state":"OR",
@@ -124,8 +124,8 @@
     "properties": {
     "id":100007,
     "date":"10/2/2019",
-    "type":"Corinarius Olympianus",
-    "aka":"",
+    "type":"Cortinarius olympianus",
+    "notes":"",
     "finder":"Jessie",
     "city":"Leavenworth",
     "state":"WA",
@@ -143,8 +143,8 @@
     "properties": {
     "id":100008,
     "date":"10/2/2019",
-    "type":"Lycoperdon Perlatum",
-    "aka":"Gem-Studded Puffball",
+    "type":"Lycoperdon perlatum",
+    "notes":"AKA Gem-Studded Puffball",
     "finder":"Jessie",
     "city":"Leavenworth",
     "state":"WA",
@@ -162,14 +162,71 @@
     "properties": {
     "id":100009,
     "date":"10/2/2019",
-    "type":"Tubinellus Floccosus",
-    "aka":"Scaly Vase Chantrelle",
+    "type":"Tubinellus floccosus",
+    "notes":"AKA Scaly Vase Chantrelle",
     "finder":"Jessie",
     "city":"Leavenworth",
     "state":"WA",
     "ref":"mnw44",
     "map_image":"rsz_100009.jpg",
     "gallery_image":"100009.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.976606,44.781089 ]
+    },
+    "properties": {
+    "id":100010,
+    "date":"11/16/2019",
+    "type":"Cortinarius variosimilis",
+    "notes":"",
+    "finder":"Jarred, Jessie",
+    "city":"Detroit",
+    "state":"OR",
+    "ref":"mpnw160",
+    "map_image":"rsz_100010.jpg",
+    "gallery_image":"100010.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.971924,45.918834 ]
+    },
+    "properties": {
+    "id":100011,
+    "date":"1/5/2020",
+    "type":"Clavulina cristata",
+    "notes":"",
+    "finder":"Billy, Josh, Jarred",
+    "city":"Cannon Beach",
+    "state":"OR",
+    "ref":"mpnw251",
+    "map_image":"rsz_100011.jpg",
+    "gallery_image":"100011.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.92982,45.650652 ]
+    },
+    "properties": {
+    "id":100012,
+    "date":"2/16/2020",
+    "type":"Nidula niveotomentosa",
+    "notes":"Hike #1, 2020",
+    "finder":"Jessie, Jarred",
+    "city":"Stevenson",
+    "state":"WA",
+    "ref":"mpnw310",
+    "map_image":"rsz_100012.jpg",
+    "gallery_image":"100012.jpg"
     }
   }
 ]

@@ -66,20 +66,16 @@
              
 <script>
            
-$.getJSON('/static/data.geojson', function( data ) {
-   for(var key in data.features){
-     var out='<div class="card">';
-     out+='<h5 class="card-header">' + data.features[key].properties.type + '</h5>';
-     out+='<img class="img-responsive" src="/static/images_raw/'+data.features[key].properties.gallery_image+'" max-width="700px" max-height="380px" alt="...">';
-     out+='<div class="card-footer">' + '<p>AKA: ' + data.features[key].properties.aka + '</br>' + '<p>Finder: ' + data.features[key].properties.finder + '<p>Near: ' + data.features[key].properties.city + ", " + data.features[key].properties.state +'</div>';
-     out+='</div>'    
-     $('body').append(out);
-   }
- });
-
-// var test = $.getJSON('/static/data.geojson')
-// console.log(test)
-
+           $.getJSON('/static/data.geojson', function( data ) {
+                     for(var key in data.features){
+                       var out='<div class="card">';
+                       out+='<h5 class="card-header">' + data.features[key].properties.type + '</h5>';
+                       out+='<img class="img-responsive" src="/static/images_raw/'+data.features[key].properties.gallery_image+'" max-width="375px" max-height="210px" alt="...">';
+                       out+='<div class="card-footer">' + '<p>Notes: ' + data.features[key].properties.notes + '</br>' + '<p>Finder: ' + data.features[key].properties.finder + '<p>Near: ' + data.features[key].properties.city + ", " + data.features[key].properties.state +'</div>';
+                       out+='</div>'    
+                       $('body').append(out);
+                     }
+                   });
                 
                 </script>      
 
@@ -92,4 +88,4 @@ $.getJSON('/static/data.geojson', function( data ) {
       </body>
       </html>
 
-      <!-- https://stackoverflow.com/questions/50213958/ajax-call-to-local-custom-json-file-to-create-bootstrap-4-cards-using-js -->
+ 
