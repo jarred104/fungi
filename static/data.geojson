@@ -17,7 +17,8 @@
     "state":"OR",
     "ref":"mpnw258",
     "map_image":"rsz_100001.jpg",
-    "gallery_image":"100001.jpg"
+    "gallery_image":"100001.jpg",
+    "icon_image":"msh1.png"
     }
   },
   {
@@ -36,7 +37,8 @@
     "state":"OR",
     "ref":"mpnw84",
     "map_image":"rsz_100002.jpg",
-    "gallery_image":"100002.jpg"
+    "gallery_image":"100002.jpg",
+    "icon_image":"msh1.png"
     }
   },
   {
@@ -55,7 +57,8 @@
     "state":"OR",
     "ref":"mpnw206",
     "map_image":"rsz_100003.jpg",
-    "gallery_image":"100003.jpg"
+    "gallery_image":"100003.jpg",
+    "icon_image":"msh1.png"
     }
   },
   {
@@ -74,7 +77,8 @@
     "state":"OR",
     "ref":"mpnw55",
     "map_image":"rsz_100004.jpg",
-    "gallery_image":"100004.jpg"
+    "gallery_image":"100004.jpg",
+    "icon_image":"msh1.png"
     }
   },
   {
@@ -93,7 +97,8 @@
     "state":"OR",
     "ref":"mpnw237",
     "map_image":"rsz_100005.jpg",
-    "gallery_image":"100005.jpg"
+    "gallery_image":"100005.jpg",
+    "icon_image":"msh1.png"
     }
   },
   {
@@ -112,7 +117,8 @@
     "state":"OR",
     "ref":"mpnw219",
     "map_image":"rsz_100006.jpg",
-    "gallery_image":"100006.jpg"
+    "gallery_image":"100006.jpg",
+    "icon_image":"msh1.png"
     }
   },
   {
@@ -131,7 +137,8 @@
     "state":"WA",
     "ref":"mpnw158",
     "map_image":"rsz_100007.jpg",
-    "gallery_image":"100007.jpg"
+    "gallery_image":"100007.jpg",
+    "icon_image":"msh2.jpg"
     }
   },
   {
@@ -150,7 +157,8 @@
     "state":"WA",
     "ref":"mnw232",
     "map_image":"rsz_100008.jpg",
-    "gallery_image":"100008.jpg"
+    "gallery_image":"100008.jpg",
+    "icon_image":"msh2.jpg"
     }
   },
   {
@@ -169,7 +177,8 @@
     "state":"WA",
     "ref":"mnw44",
     "map_image":"rsz_100009.jpg",
-    "gallery_image":"100009.jpg"
+    "gallery_image":"100009.jpg",
+    "icon_image":"msh2.jpg"
     }
   },
   {
@@ -188,7 +197,8 @@
     "state":"OR",
     "ref":"mpnw160",
     "map_image":"rsz_100010.jpg",
-    "gallery_image":"100010.jpg"
+    "gallery_image":"100010.jpg",
+    "icon_image":"msh2.jpg"
     }
   },
   {
@@ -207,7 +217,8 @@
     "state":"OR",
     "ref":"mpnw251",
     "map_image":"rsz_100011.jpg",
-    "gallery_image":"100011.jpg"
+    "gallery_image":"100011.jpg",
+    "icon_image":"msh2.jpg"
     }
   },
   {
@@ -226,7 +237,8 @@
     "state":"WA",
     "ref":"mpnw310",
     "map_image":"rsz_100012.jpg",
-    "gallery_image":"100012.jpg"
+    "gallery_image":"100012.jpg",
+    "icon_image":"msh2.jpg"
     }
   }
 ]

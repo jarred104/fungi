@@ -62,7 +62,12 @@
       // Create a new marker cluster group
       var geodata = markers.addLayer(L.geoJson(response, {
         pointToLayer: function (feature, latlng) {
-          return L.marker(latlng);
+          var myIcon = L.icon({
+            iconSize: [35, 50],
+            popupAnchor: [0, 0],
+            iconUrl: '/static/icons/msh1.png'
+          });
+          return L.marker(latlng, {icon: myIcon});
         },
         onEachFeature: function (feature, layer) {
           layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>Notes: ' + feature.properties.notes + '</b>' + '</br>' + '<b>Finder: ' + feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');
@@ -73,7 +78,33 @@
       L.control.locate().addTo(map);
     });
 
-// //Read geojson and bind popup
+        // Grab the data with d3
+        // d3.json(url, function (response) {
+      // Create a new marker cluster group
+    //   var geodata = markers.addLayer(L.geoJson(response, {
+    //     pointToLayer: function (feature, latlng) {
+    //       return L.marker(latlng);
+    //     },
+    //     onEachFeature: function (feature, layer) {
+    //       layer.bindPopup('<b>' + feature.properties.type + '</b>' + '</br>' + "<img src='/static/images_thumbnail/" + feature.properties.map_image + "' class='thumb' height=175px width=175px />" + '</br>' + '<b>Notes: ' + feature.properties.notes + '</b>' + '</br>' + '<b>Finder: ' + feature.properties.finder + '</b>' + '</br>' + '<b>Near: ' + feature.properties.city + ", " + feature.properties.state + '</b>');
+    //     }
+    //   }));
+    //   map.addLayer(markers);
+    //   map.fitBounds(geodata.getBounds());
+    //   L.control.locate().addTo(map);
+    // });
+
+
+
+
+  </script>
+</body>
+
+</html>
+
+<!-- OLD STUFF -->
+
+<!-- // //Read geojson and bind popup
 //         $.getJSON('/static/data.geojson', function(data) {
 //           var geojson = L.geoJson(data, {
 //             onEachFeature: function (feature, layer) {
@@ -84,15 +115,10 @@
 //             }
 //           }).addTo(map);
 //           map.fitBounds(geojson.getBounds());
-//         });
+//         }); -->
 
 
-  </script>
-</body>
 
-</html>
-
-<!-- OLD STUFF -->
 
 <!-- Load Leaflet from CDN -->
 <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
