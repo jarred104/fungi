@@ -63,9 +63,9 @@
       var geodata = markers.addLayer(L.geoJson(response, {
         pointToLayer: function (feature, latlng) {
           var myIcon = L.icon({
-            iconSize: [35, 50],
+            iconSize: [40, 50],
             popupAnchor: [0, 0],
-            iconUrl: '/static/icons/msh1.png'
+            iconUrl: '/static/icons/' + feature.properties.icon_image
           });
           return L.marker(latlng, {icon: myIcon});
         },
