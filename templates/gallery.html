@@ -59,7 +59,7 @@
                     Identified Mushrooms Gallery
                 </h1>
                 <p>
-                    Check out these fantastic fungi found & identfied (hopefully correctly) in the Pacific Northwest!  We are mushroom hunting and photo taking enthusiasts, but not identification experts.  Our hope is to build this website into a space where people like us can create their own galleries, maps, and interact with a community of people who share the same passion.  Check out our <a href=projectplan>Project Plan</a> page for additional details.  In the meantime, enjoy browsing our photos.
+                    Check out these fantastic fungi found & identfied (hopefully correctly) in the Pacific Northwest and beyond!  We are mushroom hunting and photo taking enthusiasts, but not identification experts by any stretch of the imagination.  See something that looks incorrect?  <a href=mailto:ineffablefungi@gmail.com>Email us</a> with any feedback about a mushroom or the website in general.
                 </p></div>
 
                 
@@ -71,7 +71,7 @@
                        var out='<div class="card">';
                        out+='<h5 class="card-header">' + data.features[key].properties.type + '</h5>';
                        out+='<img class="img-responsive" src="/static/images_raw/'+data.features[key].properties.gallery_image+'" max-width="375px" max-height="210px" alt="...">';
-                       out+='<div class="card-footer">' + '<p>Notes: ' + data.features[key].properties.notes + '</br>' + '<p>Finder: ' + data.features[key].properties.finder + '<p>Near: ' + data.features[key].properties.city + ", " + data.features[key].properties.state +'</div>';
+                       out+='<div class="card-footer">' + '<b>Notes: </b>' + data.features[key].properties.notes + '</br>' + '<b>Finder(s): </b>' + data.features[key].properties.finder + '</br>' + '<b>Near: </b>' + data.features[key].properties.city + ", " + data.features[key].properties.state +'</div>';
                        out+='</div>'    
                        $('body').append(out);
                      }
