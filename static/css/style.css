@@ -19,28 +19,33 @@
 }
 
 .circle1 {
-  width: 250px;
-  height: 250px;
-  background: url(/static/images_thumbnail/rsz_100006.jpg);
+  width: 190px;
+  height: 190px;
+  background: url(/static/images_thumbnail/map.jpg);
   border-radius: 50%;
   float: left;
   shape-outside: circle();
-  margin: 20px 20px 20px 5px;
+  margin: 8px 20px 15px 5px;
   border: 1px solid black;
   box-shadow: 8px 8px 5px grey;
 }
 
 .circle2 {
-  width: 250px;
-  height: 250px;
-  background: url(/static/images_thumbnail/rsz_100009.jpg);
+  width: 190px;
+  height: 190px;
+  background: url(/static/images_thumbnail/rsz_100007.jpg);
   border-radius: 50%;
   float: left;
   shape-outside: circle();
-  margin: 20px 20px 20px 5px;
+  margin: 8px 20px 15px 5px;
   border: 1px solid black;
   box-shadow: 8px 8px 5px grey;
 }
+
+.mt-0 {
+  text-align: center;
+}
+
 .card {
   border: 1px solid black;
   box-shadow: 8px 8px 8px grey;
