@@ -17,6 +17,18 @@
   margin-top:25px;
 }
 
+.title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 60px;
+  font-style: oblique;
+  /* @font-face {
+    font-family: ;
+    src: url();
+  } */
+  /* blackladderitc */
+}
+
 .circle1 {
   width: 190px;
   height: 190px;
@@ -24,7 +36,7 @@
   border-radius: 50%;
   float: left;
   shape-outside: circle();
-  margin: 8px 20px 15px 5px;
+  margin: 0px 20px 15px 5px;
   border: 2px solid black;
   box-shadow: 8px 8px 5px grey;
 }
@@ -32,11 +44,11 @@
 .circle2 {
   width: 190px;
   height: 190px;
-  background: url(/static/images_thumbnail/rsz_100007.jpg);
+  background: url(/static/images_thumbnail/rsz_100008.jpg);
   border-radius: 50%;
   float: left;
   shape-outside: circle();
-  margin: 8px 20px 15px 5px;
+  margin: 0px 20px 15px 5px;
   border: 2px solid black;
   box-shadow: 8px 8px 5px grey;
 }
@@ -76,9 +88,9 @@
   height: 40px;
 }
 
-.container-fluid {
+/* .container-fluid {
   margin-bottom: 25px;
-}
+} */
 
 .carousel {
   top:0;    
