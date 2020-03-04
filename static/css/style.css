@@ -53,6 +53,30 @@
   box-shadow: 8px 8px 5px grey;
 }
 
+.circle3 {
+  width: 190px;
+  height: 190px;
+  background: url(/static/images_thumbnail/iflogo.jpg);
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin: 0px 20px 15px 5px;
+  border: 2px solid black;
+  box-shadow: 8px 8px 5px grey;
+}
+
+.circle4 {
+  width: 190px;
+  height: 190px;
+  background: url(/static/images_thumbnail/paulstamets.jpg);
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin: 0px 20px 15px 5px;
+  border: 2px solid black;
+  box-shadow: 8px 8px 5px grey;
+}
+
 .mt-0 {
   text-align: center;
 }
