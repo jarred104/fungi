@@ -20,13 +20,17 @@
 .title {
   margin-top: 10px;
   text-align: center;
-  font-size: 60px;
-  font-style: oblique;
+  font-size: 55px;
+  color: #271e05;
   /* @font-face {
     font-family: ;
     src: url();
   } */
   /* blackladderitc */
+}
+
+.link {
+  color: #0b6d94;
 }
 
 .circle1 {
@@ -79,6 +83,7 @@
 
 .mt-0 {
   text-align: center;
+  color: #0b6d94;
 }
 
 .card {
