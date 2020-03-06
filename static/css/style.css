@@ -19,15 +19,15 @@
 
 @font-face {
   font-family: blkadd;
-  src: url(/fonts/blkadd.ttf);
+  src: url('../fonts/blkadd.ttf');
 }
 
 .title {
   font-family: blkadd;
   margin-top: 10px;
   text-align: center;
-  font-size: 55px;
-  color: #271e05; 
+  font-size: 60px;
+  color: #0e455a; 
 }
 
 .subtitles {
