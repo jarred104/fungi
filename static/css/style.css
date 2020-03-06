@@ -17,16 +17,17 @@
   margin-top:25px;
 }
 
+@font-face {
+  font-family: blkadd;
+  src: url(/fonts/blkadd.ttf);
+}
+
 .title {
+  font-family: blkadd;
   margin-top: 10px;
   text-align: center;
   font-size: 55px;
-  color: #271e05;
-  /* @font-face {
-    font-family: ;
-    src: url();
-  } */
-  /* blackladderitc */
+  color: #271e05; 
 }
 
 .subtitles {
