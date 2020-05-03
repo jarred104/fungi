@@ -10,12 +10,12 @@
     "properties": {
     "id":100001,
     "date":"9/18/2019",
-    "type":"Fomitopsis pinicola",
-    "notes":"AKA Larch Polypore",
+    "type":"Ganoderma oregonense",
+    "notes":"AKA Oregon Reishi",
     "finder":"Jarred",
     "city":"Portland",
     "state":"OR",
-    "ref":"mpnw258",
+    "ref":"mpnw259",
     "map_image":"rsz_100001.jpg",
     "gallery_image":"100001.jpg",
     "icon_image":"msh1.png"
@@ -31,7 +31,7 @@
     "id":100002,
     "date":"10/6/2019",
     "type":"Amanita muscaria",
-    "notes":"AKA Fly Agaric.  The good ol' Arbo",
+    "notes":"AKA Fly Agaric",
     "finder":"Jessie, Jarred",
     "city":"Portland",
     "state":"OR",
@@ -51,7 +51,7 @@
     "id":100003,
     "date":"10/20/2019",
     "type":"Hypholoma fasciculare",
-    "notes":"Taking a stroll in Forest Park",
+    "notes":"Forest Park",
     "finder":"Billy, Jarred",
     "city":"Portland",
     "state":"OR",
@@ -91,7 +91,7 @@
     "id":100005,
     "date":"10/20/2019",
     "type":"Calocera cornea",
-    "notes":"Taking a stroll in Forest Park",
+    "notes":"Forest Park",
     "finder":"Jarred, Billy",
     "city":"Portland",
     "state":"OR",
@@ -231,13 +231,93 @@
     "id":100012,
     "date":"2/16/2020",
     "type":"Nidula niveotomentosa",
-    "notes":"Hike #1, 2020",
+    "notes":"Hike #1, 2020 - Gillette Lake",
     "finder":"Jessie, Jarred",
     "city":"Stevenson",
     "state":"WA",
     "ref":"mpnw310",
     "map_image":"rsz_100012.jpg",
     "gallery_image":"100012.jpg",
+    "icon_image":"msh1.png"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.795455,45.588112 ]
+    },
+    "properties": {
+    "id":100013,
+    "date":"3/15/2020",
+    "type":"Trametes versicolor",
+    "notes":"AKA Turkey Tail",
+    "finder":"Luke, Jarred",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw264",
+    "map_image":"rsz_100013.jpg",
+    "gallery_image":"100013.jpg",
+    "icon_image":"msh1.png"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.760737,45.403592 ]
+    },
+    "properties": {
+    "id":100014,
+    "date":"4/15/2020",
+    "type":"Hericium erinaceus",
+    "notes":"Lion's Mane grow bag",
+    "finder":"@btshrooms",
+    "city":"Tigard",
+    "state":"OR",
+    "ref":"na",
+    "map_image":"rsz_100014.jpg",
+    "gallery_image":"100014.jpg",
+    "icon_image":"msh1.png"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.709505,45.578697 ]
+    },
+    "properties": {
+    "id":100015,
+    "date":"5/1/2020",
+    "type":"Otidea alutacea",
+    "notes":"Columbia Park",
+    "finder":"Jarred, Tanukis",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw290",
+    "map_image":"rsz_100015.jpg",
+    "gallery_image":"100015.jpg",
+    "icon_image":"msh1.png"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.800786,45.593376 ]
+    },
+    "properties": {
+    "id":100016,
+    "date":"5/3/2020",
+    "type":"Pleurotus pulmonarius",
+    "notes":"AKA Indian Oyster",
+    "finder":"Jarred, Luke",
+    "city":"Portland",
+    "state":"OR",
+    "ref":"mpnw134",
+    "map_image":"rsz_100016.jpg",
+    "gallery_image":"100016.jpg",
     "icon_image":"msh1.png"
     }
   }
